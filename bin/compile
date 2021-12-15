@@ -180,7 +180,7 @@ if [ \$1 = "--version" ]; then
 elif [ \$1 = "--product-version" ]; then
   exec \$HOME/.apt/opt/google/$BIN --product-version
 else
-  exec \$HOME/.apt/opt/google/$BIN --headless --no-sandbox --disable-gpu \$@
+  exec \$HOME/.apt/opt/google/$BIN --headless --no-sandbox --disable-gpu 2>/dev/null \$@
 fi
 EOF
 chmod +x $BIN_DIR/$SHIM
